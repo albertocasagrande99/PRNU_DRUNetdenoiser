@@ -44,7 +44,7 @@ In the `prnu/functions.py` file is used the Noise Extract method of DRUNet, if y
 
 ## To Run
 ```angular2html
-python example.py
+python3 example.py
 ```
 
 
