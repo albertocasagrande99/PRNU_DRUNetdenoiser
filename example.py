@@ -120,7 +120,7 @@ def main():
         create_plots.create_roc_per_single_device(stats_pce_single_device["tpr"], stats_pce_single_device["fpr"], plot_title, fingerprint_device[idx])
 
     # Write tpr/fpr results in csv file.
-    uf.write_into_csv(stats_pce["tpr"], stats_pce["fpr"], "Plots/reVISIONDataset/DRUNet100Timer/DRUNet100TimerRate.csv")
+    uf.write_into_csv(stats_pce["tpr"], stats_pce["fpr"], "Plots/Polimi_dataset/DRUNet100TimerRate.csv")
 
     # Plots PCE Histograms for each device (Use it only for Polimi dataset, because there are fewer images)
     """
@@ -148,7 +148,7 @@ def main():
         six_tuple = [fingerprint_device[i], TP[i], FP[i], TN[i], FN[i], TPR[i], FPR[i]]
         statistics_table.append(six_tuple)
     table = tabulate(statistics_table, headers=["Device", "TP", "FP", "TN", "FN", "TPR", "FPR"], tablefmt='fancy_grid')
-    uf.write_into_table_txt(table, "Plots/reVISIONDataset/DRUNet100Timer/DRUNet100TimerTable.txt")
+    uf.write_into_table_txt(table, "Plots/Polimi_dataset/DRUNet100TimerTable.txt")
     print(table)
 
     # Given the quantity of devices, plots are divided into multiple graphics.

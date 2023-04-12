@@ -46,7 +46,7 @@ def create_roc(tpr, fpr, title):
     plt.ylabel('True Positive Rate (TPR)')
     plt.xlabel('False Positive Rate (FPR)')
     plt.grid()
-    outpath = "Plots/Polimi_dataset"
+    outpath = "Plots/Polimi_dataset/"
     plot_name = outpath + "ROC Curve with DRUNet100.png"
     plt.savefig(plot_name)
     plt.show()
@@ -62,7 +62,7 @@ def create_roc_per_single_device(tpr, fpr, title, device):
     plt.ylabel('True Positive Rate (TPR)')
     plt.xlabel('False Positive Rate (FPR)')
     plt.grid()
-    outpath = "Plots/Polimi_dataset"
+    outpath = "Plots/Polimi_dataset/"
     plot_name = outpath + "ROC Curve with DRUNet100 of " + device + ".png"
     plt.savefig(plot_name)
     plt.show()
@@ -138,7 +138,7 @@ def create_boxplot(fingerprint_device, slice_arr, pce_rot, index_img):
     plt.ylabel('PCE Value')
     plt.xlabel('Devices')
     plt.grid()
-    outpath = "Plots/Polimi_dataset"
+    outpath = "Plots/Polimi_dataset/"
     plot_name = outpath + "BoxPlot with DRUNet100 " + str(index_img) + ".png"
     plt.savefig(plot_name)
     plt.show()
